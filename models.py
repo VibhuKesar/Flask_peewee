@@ -1,16 +1,16 @@
-from peewee import * #all the functions import
+from peewee import *
 import datetime
 
-db = SqliteDatabase('posts.db')	#connect db
+db = SqliteDatabase('posts.db')
 
 class Post(Model):
 	id = PrimaryKeyField()
-	date = DateTimeField(default = datetime.datetime.now) #combo of data and time from class,, current
-	title = CharField()	#arg. can be unique=True
-	text = TextField()	
+	date = DateTimeField(default = datetime.datetime.now)
+	title = CharField()
+	text = TextField()
 
-	class Meta:	#meta class to specify database to be as db object
-		database = db
+	class Meta:
+		database = db # to be db object
 
 def initialize_db():
 	db.connect()

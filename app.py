@@ -15,7 +15,7 @@ def teardown_request(exception): #check if there was exception with args.
 @app.route('/')
 def index():
 	#render homepage with saved posts
-	return render_template('home.html', posts=Post.select().order_by(Post.date.desc))
+	return render_template('home.html', posts=Post.select().order_by(Post.date.desc()))
 
 @app.route('/new_post/')
 def new_post():

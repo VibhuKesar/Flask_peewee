@@ -7,8 +7,8 @@
 	<a href="new_post">Add a new post</a>
 
 	{% for post in posts %}
-		<h1> {post.title}</h1>
-		<h1>Posted on : {{ post.date,strftime('%m/%d/%Y at %G:%I%p')}} </h1>
+		<h1> {{post.title}}</h1>
+		<h1>Posted on : {{ post.date.strftime('%m/%d/%Y at %G:%I%p') }} </h1>
 		<p>{{ post.text }}</p>
 		<br>
 
